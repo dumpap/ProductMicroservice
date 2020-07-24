@@ -12,7 +12,7 @@ pipeline {
                 git credentialsId: '56cbec1d-59dc-4500-b921-6a2a4958471c', url: 'https://github.com/dumpap/ProductMicroservice.git'
             }
         }
-	stage('Restore Packages'){
+	stage('Restore NuGet Packages'){
 		steps {
 			sh "NuGet restore"
 			}
