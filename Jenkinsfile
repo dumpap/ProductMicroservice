@@ -19,7 +19,7 @@ pipeline {
 		}
 	stage('Restore Packages'){
 		steps {
-			sh "dotnet restore ProductMicroservice.sln"
+			sh "dotnet restore ProductMicroservice.csproj"
 		      }
 		}
         stage('Publish') {
