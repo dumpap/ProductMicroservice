@@ -14,7 +14,7 @@ pipeline {
         }
 	stage('Restore NuGet Packages'){
 		steps {
-			sh "NuGet restore"
+			sh "nuget restore"
 			}
 		}
 	stage('Restore Packages'){
