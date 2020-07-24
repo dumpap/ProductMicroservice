@@ -14,13 +14,13 @@ pipeline {
         }
 	stage('Restore NuGet Packages'){
 		steps {
-			sh "nuget restore"
+			sh "nuget restore ProductMicroservice.sln"
 			}
 		}
 	stage('Restore Packages'){
 		steps {
-				sh "dotnet restore ProductMicroservice.sln"
-			}
+			sh "dotnet restore ProductMicroservice.sln"
+		      }
 		}
         stage('Publish') {
             steps {
